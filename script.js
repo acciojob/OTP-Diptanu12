@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll('.code');
 inputs.forEach((input, index) => {
   input.addEventListener('input', () => {
     if (input.value && index < inputs.length - 1) {
-      inputs[index + 1].focus(); 
+      inputs[index + 1].focused(); 
     }
   });
 
@@ -12,7 +12,7 @@ inputs.forEach((input, index) => {
       if (input.value) {
         input.value = '';
       } else if (index > 0) {
-        inputs[index - 1].focus(); 
+        inputs[index - 1].focused(); 
       }
     }
   });
